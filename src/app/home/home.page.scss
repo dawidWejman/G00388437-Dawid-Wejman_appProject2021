@@ -1,27 +1,62 @@
-#container {
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+#box1 {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  border: 3px solid black;
+  grid-column: span 2;
+  padding: 10px;
+  font-size: xx-large;
+  background-color: rgba(100, 255, 50, 1);
+  height: 170px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#box2 {
+  grid-column: span 2;
+  text-align: center;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#box3 {
+  grid-column: span 1;
+  height: auto;
+  border-left: 3px solid black;
+  padding: 0px 0px 0px 10px;
 }
 
-#container a {
+ul {
+  border: 3px solid black;
+  border-right-width: 0.5px;
+  border-top-width: 0.5px;
+  width: 356.4px;
+  height: 20px;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0px;
+}
+
+ul:hover {
+  background-color: yellow;
+  color: black;
+}
+
+a {
   text-decoration: none;
+  color: black;
+}
+
+#Account {
+  border-right-width: 3px;
+}
+
+#sportSection {
+  grid-column: 2;
+  padding: 20px;
+  text-align: center;
+  border: 3px solid black;
+  border-top-width: 0.5px;
+
 }

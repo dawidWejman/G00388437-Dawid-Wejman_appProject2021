@@ -1,0 +1,103 @@
+body {
+    background-color: #1f2833;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+#box1 {
+    text-align: center;
+    border: 3px solid black;
+    grid-column: span 2;
+    padding: 10px;
+    font-size: xx-large;
+    background-color: #66Fcf1;
+    height: 170px;
+}
+
+#box2 {
+    grid-column: span 2;
+    text-align: center;
+    background-color: #45a29e;
+}
+
+#box3 {
+    grid-column: span 2;
+    height: 637px;
+    padding: 0px 0px 0px 10px;
+    color: #c5c6c7;
+}
+
+ul {
+    border: 3px solid black;
+    border-right-width: 0.5px;
+    border-top-width: 0.5px;
+    width: 356.4px;
+    height: 20px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0px;
+}
+
+ul:hover {
+    background-color: #66Fcf1;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#regLink {
+    text-decoration: underline;
+    color:#c5c6c7;
+}
+
+#account {
+    border-right-width: 3px;
+}
+
+#login {
+    width: 350px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+#login h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+#login p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+#login input {
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+#login button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #66Fcf1;
+    color: black;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>sport.info</title>
+        <link href="register.scss" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            
+            <div id="box1"><h1>sport.info</h1></div>
+
+            <div id="box2"><ul><a href="mainpage.html">Home</a></ul><ul><a href="movies.html">Movies</a></ul><ul><a href="celebrity.html">Celebrity</a></ul><ul><a href="sport.html">Sport</a></ul><ul id="account"><a href="account.html">Account</a></ul></div>
+                    
+            <div id="box3">
+                <h1>Register</h1>
+                <form action="#" method="POST" id="forms">
+                    <br><br>
+                    <input type="text" class="textForm" placeholder="First Name" id="firstName" required>
+                    <input type="text" class="textForm" placeholder="Last Name" id="lastName" required>
+                    <input type="email" class="textForm" placeholder="Enter your email address" id="email" required>
+                    <input type="password" class="textForm" placeholder="Create a password" id="password" required>
+                    <input type="password" class="textForm" placeholder="Re-Type Password" id="confirm_password" required>
+                    <br><br>
+                    <input type="checkbox"> Receive offers and promotions from Macarena.TV<br><br>
+                    <button type="submit" id="registerButton">Register</button>
+                    <p>Already have an account? <a href="Account.html" id="loginPage">Log In</a></p>
+                </form>
+                
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    // code to validate all fields have been filled 
+    var firstName = document.getElementById('firstName');
+    var lastName = document.getElementById('lastName');
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
+    var conPassword = document.getElementById('confirm_password');
+    var register = document.getElementById('registerButton');
+    var form = document.querySelector('form');
+    form.onsubmit = ()=>{return false}
+
+    register.onclick = ()=>{
+        if ((firstName.value != "") && (lastName.value != "") && (email.value != "") && (password.value != "") 
+            && (conPassword.value != ""))
+        {
+            //code to validate both passwords are equal
+            if(password.value != conPassword.value) {
+                conPassword.setCustomValidity("Passwords Don't Match");
+            } else {
+                conPassword.setCustomValidity('');
+                window.location.href = "mainAccountPage.html";
+            }
+            password.onchange = validatePassword;
+	        conPassword.onkeyup = validatePassword;
+        }
+    }
+</script>

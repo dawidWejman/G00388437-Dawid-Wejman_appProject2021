@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>sport.info</title>
+        <link href="Account.scss" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            
+            <div id="box1"><h1>Macarena.TV</h1></div>
+
+            <div id="box2"><ul><a href="home.page.html">Home</a></ul><ul><a href="movies.html">Movies</a></ul><ul><a href="celebrity.html">Celebrity</a></ul><ul><a href="sport.html">Sport</a></ul><ul id="account"><a href="account.html">Account</a></ul></div>
+            
+            <div id="box3">
+                <div id="login">
+                    <h1>Login Here</h1>
+                    <form action="#" method="POST" id="checkForm">
+                        <p>Email Address:</p>
+                        <input type="email" placeholder="Email Address" id="email" required>
+                        <p>Password:</p>
+                        <input type="password" placeholder="Password" id="password" required>
+                        <button type="submit" id="loginButton">Login</button>
+                    </form>
+                    <br>
+                    <p>Not a member?</p><p><a href="register.html" id="regLink">Register</a></p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </body>
+</html>
+<script>
+    // code to validate all fields have been filled
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
+    var login = document.getElementById('loginButton');
+    var form = document.querySelector('form');
+    form.onsubmit = ()=>{return false}
+
+    login.onclick = ()=>{
+        if ((email.value != "") && (password.value != ""))
+        {
+            window.location.href = "mainAccountPage.html";
+        }
+    }
+</script>
